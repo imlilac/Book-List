@@ -19,7 +19,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](https://github.com/imlilac/Daneshkar-js-hw-4-ToDoList/blob/main/assets/img/screen.png)
+![](https://github.com/imlilac/Book-List/blob/main/Screenshot%202024-08-05%20222625.png)
 
 ## My process
 
