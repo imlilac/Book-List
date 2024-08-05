@@ -2,7 +2,7 @@
 
 ![logo](https://github.com/imlilac/Daneshkar-js-hw-4-ToDoList/blob/main/assets/img/banner.jpg)
 
-Designing a simple Book list using HTML5 & CSS & JS (opp paradime)
+Designing a simple Book list using HTML5 & CSS(bootstrap) & JS (opp paradime)
 
 ## Table of contents
 
