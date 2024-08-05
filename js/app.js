@@ -14,6 +14,12 @@ class BaseBook {
          isComplete: this.isComplete,
       };
    }
+
+   static fromJSON(json) {
+      const book = new BaseBook(json.title);
+      book.isComplete = json.isComplete;
+      return book;
+   }
 }
 
 class Book extends BaseBook {
@@ -42,12 +48,17 @@ class AbstractBookList {
    saveBooksIntoLocalStorage() {
       localStorage.setItem("books", JSON.stringify(this.books.map((book) => book.toJSON())));
    }
+
+   loadBooksFromLocalStorage() {
+      const books = JSON.parse(localStorage.getItem("books")) || [];
+      this.books = books.map((book) => Book.fromJSON(book));
+   }
 }
 
 class BookList extends AbstractBookList {
    constructor(booksContainer) {
       super(booksContainer);
-      this.books = JSON.parse(localStorage.getItem("books")) || [];
+      this.loadBooksFromLocalStorage();
       this.render();
    }
 
